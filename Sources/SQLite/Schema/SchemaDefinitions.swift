@@ -122,6 +122,14 @@ public struct ColumnDefinition: Equatable {
         let primaryKey: String?
         let onUpdate: String?
         let onDelete: String?
+        
+        public init(table: String, column: String, primaryKey: String? = nil, onUpdate: String? = nil, onDelete: String? = nil) {
+            self.table = table
+            self.column = column
+            self.primaryKey = primaryKey
+            self.onUpdate = onUpdate
+            self.onDelete = onDelete
+        }
     }
 
     public let name: String
